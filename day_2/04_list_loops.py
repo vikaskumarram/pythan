@@ -37,7 +37,6 @@ print(doubled_marks)
 
 
 
-
 marks = [80, 90, 100, 60, 85]
 
 #second way
@@ -51,7 +50,7 @@ print(marks)
 
 
 # Task 1.3: Double the power
-powers = [2000, 3000, 4000, 1500]
+powers = [2000, 3000, 4000, 1500, 1000, 50]
 doubled_powers= [power * 2 for power in powers]
 print(doubled_powers)
 
@@ -64,7 +63,7 @@ print(doubled_powers)
 # ## Task 1.4
 # Find longer names (>= 6 letter)
 
-characters = ["Hello kitty", "Goku", "Pikachu", "Luffy", "Yuji Itadori", "Levi"]
+characters = ["Hello kitty", "Goku", "vikash kumar", "Pikachu", "Luffy", "Yuji Itadori", "Levi"]
 
 # ### Expected Output
 # ['Hello kitty', 'Pikachu', 'Yuji Itadori']
