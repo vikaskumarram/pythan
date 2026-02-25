@@ -143,3 +143,46 @@ Find all the Toy Story movies ✓
 Find all the movies directed by John Lasseter ✓
 Find all the movies (and director) not directed by John Lasseter ✓
 Find all the WALL-* movies ✓
+
+
+
+## Exercise 4 — Tasks
+
+- List all directors of Pixar movies (alphabetically), without duplicates
+  SELECT DISTINCT DIRECTOR
+ FROM movies
+ ORDER BY DIRECTOR ASC;
+
+
+- List the last four Pixar movies released (ordered from most - recent to least)
+ SELECT TITLE,YEAR
+FROM movies
+ORDER BY  YEAR DESC
+LIMIT 4;
+
+
+- List the first five Pixar movies sorted alphabetically
+  SELECT TITLE 
+FROM movies
+ORDER BY TITLE ASC
+LIMIT 5
+;
+
+
+- List the next five Pixar movies sorted alphabetically
+  SELECT TITLE 
+FROM movies
+ORDER BY TITLE ASC
+LIMIT 5 OFFSET 5
+;
+
+(<Screenshot 2026-02-25 181932.png>)
+
+## Exercise 4 — Tasks
+List all directors of Pixar movies (alphabetically), without duplicates ✓
+
+List the last four Pixar movies released (ordered from most recent to least) ✓
+
+List the first five Pixar movies sorted alphabetically ✓
+
+List the next five Pixar movies sorted alphabetically ✓
