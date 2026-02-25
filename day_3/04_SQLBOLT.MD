@@ -109,3 +109,37 @@ Find the movies released in the years between 2000 and 2010 ✓
 Find the movies not released in the years between 2000 and 2010 ✓
 Find the first 5 Pixar movies and their release year ✓
 '''
+
+
+
+## Exercise 3 — Tasks
+- Find all the Toy Story movies
+  SELECT * 
+FROM movies
+WHERE TITLE LIKE "Toy Story%";
+
+
+- Find all the movies directed by John Lasseter
+ SELECT * 
+FROM movies
+WHERE director LIKE "John Lasseter%";
+
+
+- Find all the movies (and director) not directed by John Lasseter
+  SELECT * 
+FROM movies
+WHERE director not like "john Lasseter%";
+
+
+- Find all the WALL-* movies
+  SELECT * 
+FROM movies
+WHERE title like "WALL%";
+
+![alt text](<Screenshot 2026-02-25 172209.png>)
+
+Exercise 3 — Tasks
+Find all the Toy Story movies ✓
+Find all the movies directed by John Lasseter ✓
+Find all the movies (and director) not directed by John Lasseter ✓
+Find all the WALL-* movies ✓
