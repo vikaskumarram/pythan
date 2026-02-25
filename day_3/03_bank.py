@@ -210,13 +210,14 @@ class Account:
   interest_=0.02
   def __init__(self,account_number,name,balance):
       self.account=account_number
-      self.name=name
+      self.gopi=gopi
       self.balance=balance
       def apply_interest(self):
           self.balance=(self.balance * Account .interest_rate + self.balance)
           return f"success.Applied interest rate of {Account.interest_rate:2%}. {self.display.balance()}"
       def display_balance(self):
        return f"your balance is:{self.balance:,.2f}"
+       
 
 # Success. Applied interest rate of 2.00%. Your balance is: ₹10,200,000.00
 # Success. Applied interest rate of 2.00%. Your balance is: ₹1,020,000.00
