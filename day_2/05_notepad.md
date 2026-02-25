@@ -13,12 +13,14 @@ syntex =
 
 get(key)  is saf it is can provide a default value
 it is ? (like optional chnainging)
-
+pascal case- every first letter of word should be capital
 
 ## classes
+it is real nature sceneirio
 In Python, a class is a blueprint or template for creating objects
 multiple object in one classes
 creating a object is called instantiation
+when you create instantiat then inhit function call
 ## programming paradigms four type
 1 functional ( Haskal.F#)
 2 oop ( python, java)

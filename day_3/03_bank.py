@@ -21,7 +21,7 @@ class Car:
 
 # Object
 # self -> Object
-hindustan = Car(4, "v4", "Ambassador", 4)
+hindustan = Car(4, "v4", "Ambassador", 4)  # creating the object = instantiate
 jeep = Car(4, "v6", "Wrangler", 4)
 
 print(hindustan)  # Car object
@@ -55,4 +55,29 @@ print(hindustan.horn())
 # 1. nk - 50_000
 # 2. rishi - 3_00_000
 # 3. puspha - 10_00_000
- 
+
+
+# print(nk.balance) # 50000
+
+
+class Account:
+    def __init__(self, account_number, name, balance):
+        self.acc_no = account_number
+        self.name = name
+        self.balance = balance
+
+    # Task
+    def display_balance(self):
+      return (f"Your Balance is ₹{self.balance:,.2f}")
+
+nk = Account(101, "Nandha Kumar", 50_000)
+rishi = Account(102, "Rishi", 3_00_000)
+puspha = Account(103, "Pushpendar", 10_00_000)
+
+print(rishi.balance)
+print(rishi)
+
+print(rishi.display_balance())
+# Your balance is: ₹ 3,00,000.00
+print(puspha.display_balance())
+print(nk.display_balance())
