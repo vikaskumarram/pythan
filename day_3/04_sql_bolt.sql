@@ -1,4 +1,4 @@
-'''
+
  ## Exercise 1 — Tasks
 - Find the title of each film ✓
  '''
@@ -90,10 +90,13 @@ FROM movies
 WHERE id = 6;
 
 - Find the movies released in the years between 2000 and 2010
-  SELECT *
-FROM movies
-WHERE YEAR BETWEEN 2000 AND 2010;
+'''sql
 
+ SELECT *
+ FROM movies
+ WHERE YEAR BETWEEN 2000 AND 2010;
+
+'''
 - Find the movies not released in the years between 2000 and 2010
   SELECT *
 FROM movies
