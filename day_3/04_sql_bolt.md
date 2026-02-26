@@ -84,60 +84,81 @@ Find all the information about each film ✓
 
 
 ## Exercise 2 — Tasks
+
 - Find the movie with a row id of 6 ✓
+```sql
 SELECT * 
 FROM movies 
 WHERE id = 6;
-
+```
 - Find the movies released in the years between 2000 and 2010
-'''sql
+```sql
 
  SELECT *
  FROM movies
  WHERE YEAR BETWEEN 2000 AND 2010;
-
-'''
+```
 - Find the movies not released in the years between 2000 and 2010
-  SELECT *
+```sql
+SELECT *
 FROM movies
 WHERE YEAR NOT BETWEEN 2000 AND 2010;
+
+```
 - Find the first 5 Pixar movies and their release year
+```sql
+
   SELECT *
 FROM movies
 WHERE ID <6;
-'''
+
+```
+
 Exercise 2 — Tasks
-Find the movie with a row id of 6 ✓
-Find the movies released in the years between 2000 and 2010 ✓
-Find the movies not released in the years between 2000 and 2010 ✓
-Find the first 5 Pixar movies and their release year ✓
+- 1 Find the movie with a row id of 6 ✓
+- 2 Find the movies released in  theyears between 2000 and 2010 ✓
+- 3 Find the movies not released in the years between 2000 and 2010 ✓
+- 4 Find the first 5 Pixar movies and their release year ✓
 '''
 
 
 
 ## Exercise 3 — Tasks
 - Find all the Toy Story movies
+```sql
+
   SELECT * 
 FROM movies
 WHERE TITLE LIKE "Toy Story%";
 
+```
 
 - Find all the movies directed by John Lasseter
+```sql
+
  SELECT * 
 FROM movies
 WHERE director LIKE "John Lasseter%";
 
+```
 
 - Find all the movies (and director) not directed by John Lasseter
-  SELECT * 
+```sql
+
+SELECT * 
 FROM movies
 WHERE director not like "john Lasseter%";
 
+```
 
 - Find all the WALL-* movies
+```sql
+
   SELECT * 
 FROM movies
 WHERE title like "WALL%";
+
+```
 
 ![alt text](<Screenshot 2026-02-25 172209.png>)
 
@@ -152,32 +173,43 @@ Find all the WALL-* movies ✓
 ## Exercise 4 — Tasks
 
 - List all directors of Pixar movies (alphabetically), without duplicates
+```sql
+
   SELECT DISTINCT DIRECTOR
  FROM movies
  ORDER BY DIRECTOR ASC;
 
+```
 
 - List the last four Pixar movies released (ordered from most - recent to least)
- SELECT TITLE,YEAR
+```sql
+
+SELECT TITLE,YEAR
 FROM movies
 ORDER BY  YEAR DESC
 LIMIT 4;
 
-
+```
 - List the first five Pixar movies sorted alphabetically
+
+```sql
   SELECT TITLE 
 FROM movies
 ORDER BY TITLE ASC
 LIMIT 5
 ;
-
+```
 
 - List the next five Pixar movies sorted alphabetically
+```sql
+
   SELECT TITLE 
 FROM movies
 ORDER BY TITLE ASC
-LIMIT 5 OFFSET 5
-;
+LIMIT 5 OFFSET 5;
+
+```
+
 
 (<Screenshot 2026-02-25 181932.png>)
 
@@ -189,3 +221,33 @@ List the last four Pixar movies released (ordered from most recent to least) ✓
 List the first five Pixar movies sorted alphabetically ✓
 
 List the next five Pixar movies sorted alphabetically ✓
+![alt text](<Screenshot 2026-02-25 181932-1.png>)
+
+## Exercise 6 — Tasks
+- 1  Find the domestic and international sales for each movie ✓
+```sql
+SELECT * 
+FROM movies as m
+inner join boxoffice as b
+on m.id=b.movie_id
+;
+```
+- 2 Show the sales numbers for each movie that did better internationally rather than domestically
+```sql
+SELECT * 
+FROM movies
+Inner Join Boxoffice
+on movies.id=boxoffice.movie_id
+WHERE International_sales > Domestic_sales
+;
+```
+- 3 List all the movies by their ratings in descendi
+```sql
+SELECT * 
+FROM movies
+Inner Join Boxoffice
+on movies.id=boxoffice.movie_id
+ORDER BY Rating Desc ;
+```
+
+![alt text](<Screenshot 2026-02-26 175831.png>)
