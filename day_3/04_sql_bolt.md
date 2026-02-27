@@ -251,3 +251,26 @@ ORDER BY Rating Desc ;
 ```
 
 ![alt text](<Screenshot 2026-02-26 175831.png>)
+
+
+
+
+## Exercise 8 — Tasks
+- Find the name and role of all employees who have not been assigned to a building ✓
+ ```sql
+SELECT name,role 
+FROM employees
+where building is null;
+```
+
+- Find the names of the buildings that hold no employees
+```sql
+SELECT DISTINCT building_name
+FROM buildings
+LEFT JOIN employees
+ON building_name = employees.building
+WHERE employees.building IS NULL;
+```
+
+![alt text](<Screenshot 2026-02-27 103221.png>)
+

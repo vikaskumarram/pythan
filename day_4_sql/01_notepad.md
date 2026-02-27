@@ -6,6 +6,7 @@
 - 3 having a table without a primary key is not permitted
 - 4 repeating group is not permitted
 - normolization used for avoid anolmy
+  
 - ### addining two column is called composite inventry
   ### foriegn key
 -  other then primary key is called foreign key.

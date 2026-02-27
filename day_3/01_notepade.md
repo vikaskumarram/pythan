@@ -11,7 +11,10 @@
 ## 3 classmethod
 - it is access to class variable
 - 
-
+perimary kwy three rule
+1 uniq
+2 not repeat
+3 not null value
 
 
 
