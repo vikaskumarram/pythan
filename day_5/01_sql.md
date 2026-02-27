@@ -45,3 +45,27 @@ FROM employees
 GROUP BY building;
 ```
 ![alt text](<Screenshot 2026-02-27 124812.png>)
+
+
+## Exercise 11 — Tasks
+- Find the number of Artists in the studio (without a HAVING clause) ✓
+```sql
+SELECT COUNT(Role) 
+FROM employees
+WHERE Role = "Artist";
+```
+- Find the number of Employees of each role in the studio
+  ```sql
+  SELECT * ,COUNT (Name)
+FROM employees
+group by Role ;
+- Find the total number of years employed by all Engineers
+```sql
+SELECT role, SUM(years_employed)
+FROM employees
+GROUP BY role
+HAVING role = "Engineer";
+```
+![alt text](<Screenshot 2026-02-27 170534.png>)
+
+
