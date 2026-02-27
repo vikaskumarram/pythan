@@ -69,3 +69,21 @@ HAVING role = "Engineer";
 ![alt text](<Screenshot 2026-02-27 170534.png>)
 
 
+## Exercise 12 — Tasks
+- Find the number of movies each director has directed ✓
+ ```sql
+SELECT COUNT(title), director 
+FROM movies
+group by director
+```
+
+- Find the total domestic and international sales that can be attributed to each director
+```sql
+SELECT director, SUM(domestic_sales + international_sales)  as total_sales
+FROM movies
+INNER JOIN boxoffice
+ON movies.id = boxoffice.movie_id
+GROUP BY director;
+```
+
+![alt text](<Screenshot 2026-02-27 172738.png>)
